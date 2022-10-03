@@ -7,6 +7,8 @@ $lingkaran = new lingkaran(12);
 $persegiPanjang = new persegiPanjang(5,3);
 $segitiga = new segitiga(3,4);
 
+$ar_judul = ['No', 'Nama Bidang', 'Keterangan', 'Luas Bidang','Keliling Bidang'];
+
 // $suara_hewan = [$tom, $shaun, $scooby ];
 
     // echo '<br/>'.$lingkaran->namaBidang();
@@ -29,12 +31,11 @@ $segitiga = new segitiga(3,4);
         <table align="center" cellpadding="" width="90%" border="1px" class="table table-bordered">
 			<thead>
 				<tr bgcolor="tomato">
-					<th>No</th>
-					<th>Nama Bidang</th>
-					<th>Keterangan</th>
-                    <th>Luas Bidang</th>
-                    <th>Keliling Bidang</th>
-                    
+                <?php
+                    foreach($ar_judul as $jdl){
+                    ?>
+                    <th><?= $jdl ?></th>
+                    <?php } ?>
 				</tr>
 		</thead> 
         <tbody>
